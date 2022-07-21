@@ -1,0 +1,41 @@
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  position: fixed;
+  width: 100%;
+}
+
+.header__logo {
+  margin-left: 55px;
+}
+
+.header__nav {
+  backdrop-filter: blur(60px);
+  display: flex;
+  padding: 0 15vw 0 93px;
+  position: relative;
+}
+
+.header__nav__item {
+  @include nav-text;
+
+  border-bottom: 2px solid transparent;
+  color: $color-tertiary;
+  padding: 39px 0 37px 0;
+
+  &:nth-child(n + 2) {
+    margin-left: 48px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-bottom: 2px solid $border-color;
+  }
+}
+
+.header__nav__item__index {
+  font-weight: 600;
+  margin-right: 10px;
+}

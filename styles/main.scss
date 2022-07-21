@@ -1,2 +1,11 @@
 @import './base/reset.scss';
 @import './base/font.scss';
+@import './base/colors.scss';
+
+@import './shared/titles.scss';
+@import './shared/paragraphs.scss';
+@import './shared/font-mixins.scss';
+
+@import './components/header.scss';
+
+@import './pages/home.scss';
