@@ -1,0 +1,81 @@
+.planets {
+  display: flex;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.planets__image {
+  height: 400px;
+  margin: 45px;
+  width: 400px;
+  position: relative;
+}
+
+.planets__wrapper {
+  margin-left: 8vw;
+  max-width: 500px;
+}
+
+.planets__wrapper__list {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.planets__wrapper__list__item {
+  @include nav-text;
+
+  color: $color-secondary;
+  cursor: pointer;
+  padding: 12px 0;
+
+  &:nth-child(n + 2) {
+    margin-left: 35px;
+  }
+
+  &.active {
+    color: $color-tertiary;
+    border-bottom: 2px solid $color-tertiary;
+  }
+}
+
+.planets__wrapper__title {
+  @include title-m;
+
+  margin-bottom: 30px;
+}
+
+.planets__wrapper__description {
+}
+
+.planets__wrapper__infos {
+  display: flex;
+  margin-top: 50px;
+  padding-top: 30px;
+  position: relative;
+
+  &::before {
+    background-color: $border-color;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.planets__wrapper__infos__distance,
+.planets__wrapper__infos__time {
+  h4 {
+    @include subheading-s;
+    margin-bottom: 15px;
+  }
+
+  p {
+    @include subheading-m;
+  }
+}
+
+.planets__wrapper__infos__time {
+  margin-left: 80px;
+}

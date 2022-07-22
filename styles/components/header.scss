@@ -21,17 +21,12 @@
 .header__nav__item {
   @include nav-text;
 
-  border-bottom: 2px solid transparent;
   color: $color-tertiary;
+  cursor: pointer;
   padding: 39px 0 37px 0;
 
   &:nth-child(n + 2) {
     margin-left: 48px;
-  }
-
-  &:hover {
-    cursor: pointer;
-    border-bottom: 2px solid $border-color;
   }
 }
 

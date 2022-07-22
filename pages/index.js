@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 
-import bg from '../public/assets/home/background-home-desktop.jpg'
+import background from '../public/assets/home/background-home-desktop.jpg'
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <main
         className="home"
         style={{
-          backgroundImage: `url(${bg.src})`
+          backgroundImage: `url(${background.src})`
         }}
       >
         <div className="home__wrapper">

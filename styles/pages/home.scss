@@ -14,8 +14,10 @@
 }
 
 .home__wrapper__text__title {
+  @include title-l;
+
   &__span {
-    @include subheading;
+    @include subheading-l;
   }
 }
 
@@ -28,6 +30,7 @@
   background-color: $color-tertiary;
   border: none;
   border-radius: 100%;
+  cursor: pointer;
   font-family: $font-primary;
   font-size: 32px;
   outline: none;

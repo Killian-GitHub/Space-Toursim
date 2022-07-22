@@ -1,0 +1,12 @@
+@mixin nav-text {
+  border-bottom: 2px solid transparent;
+  font-family: $font-secondary;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2.35px;
+  text-transform: uppercase;
+
+  &:hover {
+    border-bottom: 2px solid $border-color;
+  }
+}

@@ -3,9 +3,12 @@
 @import './base/colors.scss';
 
 @import './shared/titles.scss';
+@import './shared/subtitles.scss';
 @import './shared/paragraphs.scss';
-@import './shared/font-mixins.scss';
-
-@import './components/header.scss';
+@import './shared/nav-text.scss';
 
 @import './pages/home.scss';
+@import './pages/destination.scss';
+
+@import './components/header.scss';
+@import './components/planets.scss';

@@ -1,5 +1,8 @@
 $color-primary: #0b0d17;
 $color-secondary: #d0d6f9;
 $color-tertiary: #ffffff;
+$border-color: #ffffff3e;
 
-$border-color: #ffffff85;
+body {
+  background-color: $color-primary;
+}
