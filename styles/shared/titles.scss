@@ -11,3 +11,10 @@
   font-size: 100px;
   text-transform: uppercase;
 }
+
+@mixin title-s {
+  color: $color-tertiary;
+  font-family: $font-primary;
+  font-size: 56px;
+  text-transform: uppercase;
+}

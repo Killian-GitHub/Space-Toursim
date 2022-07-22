@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Layout title={'Home'}>
       <main
-        className="home"
+        className="page-layout home"
         style={{
           backgroundImage: `url(${background.src})`
         }}

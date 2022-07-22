@@ -1,11 +1,11 @@
 import Layout from '../components/Layout'
-import Planets from '../components/Planets'
+import Members from '../components/Members'
 
-import background from '../public/assets/destination/background-destination-desktop.jpg'
+import background from '../public/assets/crew/background-crew-desktop.jpg'
 
-export default function DestinationPage() {
+export default function CrewPage() {
   return (
-    <Layout title={'Destination'}>
+    <Layout title={'Crew'}>
       <main
         className="page-layout"
         style={{
@@ -13,9 +13,9 @@ export default function DestinationPage() {
         }}
       >
         <p className="page-layout__description">
-          <span>01</span> pick your destination
+          <span>02</span> Meet your crew
         </p>
-        <Planets />
+        <Members />
       </main>
     </Layout>
   )

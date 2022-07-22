@@ -1,0 +1,20 @@
+.page-layout {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 75vh;
+  padding-top: 25vh;
+}
+
+.page-layout__description {
+  @include subheading-l;
+
+  color: $color-tertiary;
+  margin-bottom: 6vh;
+  margin-left: 170px;
+
+  & span {
+    color: $border-color;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+}
