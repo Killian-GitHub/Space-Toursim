@@ -3,7 +3,7 @@ export default function Header() {
     { id: '00', label: 'Home', path: '/' },
     { id: '01', label: 'Destination', path: '/destination' },
     { id: '02', label: 'Crew', path: '/crew' },
-    { id: '03', label: 'Technology', path: '/' }
+    { id: '03', label: 'Technology', path: '/technology' }
   ]
 
   return (

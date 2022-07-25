@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import data from '../data/data.json'
 
-export default function Destination() {
+export default function Destinations() {
   const [activeDestination, setActiveDestination] = React.useState(0)
 
   const destinationHandler = (destinationName) => {
@@ -44,10 +44,10 @@ export default function Destination() {
 
       <div className="planets__wrapper">
         <ul className="planets__wrapper__list">
-          {data.destinations.map((el) => (
+          {data.destinations.map((el, index) => (
             <li
               className="planets__wrapper__list__item"
-              key={el.name}
+              key={index}
               onClick={() => destinationHandler(el.name)}
             >
               {el.name}

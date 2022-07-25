@@ -43,10 +43,10 @@ export default function Members() {
         <p className="members__wrapper__description">{bio}</p>
 
         <div className="members__wrapper__selector">
-          {data.crew.map((el) => (
+          {data.crew.map((el, index) => (
             <svg
               className="members__wrapper__selector__item"
-              key={el.index}
+              key={index}
               onClick={() => memberHandler(el.name)}
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
