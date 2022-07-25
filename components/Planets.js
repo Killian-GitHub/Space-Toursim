@@ -38,9 +38,9 @@ export default function Destinations() {
 
   return (
     <div className="planets">
-      <div className="planets__image">
-        <Image src={images} layout="fill" objectFit="cover" />
-      </div>
+      {/* <div className="planets__image"> */}
+      <img className="planets__image" src={images} alt={name} />
+      {/* </div> */}
 
       <div className="planets__wrapper">
         <ul className="planets__wrapper__list">

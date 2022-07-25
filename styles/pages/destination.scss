@@ -1,17 +1,11 @@
 .destination {
-  padding-top: 25vh;
-}
+  background-image: url('../../public/assets/destination/background-destination-desktop.jpg');
 
-.destination__description {
-  @include subheading-l;
+  @include tablet {
+    background-image: url('../../public/assets/destination/background-destination-tablet.jpg');
+  }
 
-  color: $color-tertiary;
-  margin-bottom: 6vh;
-  margin-left: 170px;
-
-  & span {
-    color: $border-color;
-    font-weight: 600;
-    margin-right: 10px;
+  @include mobile {
+    background-image: url('../../public/assets/destination/background-destination-mobile.jpg');
   }
 }

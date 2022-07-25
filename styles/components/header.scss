@@ -5,9 +5,15 @@
   margin-top: 40px;
   position: fixed;
   width: 100%;
+
+  @include tablet {
+    margin-top: 0;
+    position: initial;
+  }
 }
 
 .header__logo {
+  cursor: pointer;
   margin-left: 55px;
 }
 
@@ -16,21 +22,47 @@
   display: flex;
   padding: 0 15vw 0 93px;
   position: relative;
+
+  @include tablet {
+    padding: 5px 48px;
+  }
 }
 
-.header__nav__item {
+.header__nav__item,
+.header__nav__item--active {
   @include nav-text;
 
   color: $color-tertiary;
-  cursor: pointer;
-  padding: 39px 0 37px 0;
+
+  & a {
+    display: block;
+    line-height: 90px;
+  }
 
   &:nth-child(n + 2) {
     margin-left: 48px;
   }
 }
 
+.header__nav__item--active {
+  position: relative;
+
+  &::before {
+    background-color: $color-tertiary;
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
 .header__nav__item__index {
   font-weight: 600;
   margin-right: 10px;
+
+  @include tablet {
+    display: none;
+  }
 }

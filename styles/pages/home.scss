@@ -1,6 +1,15 @@
 .home {
+  background-image: url(../../public/assets/home/background-home-desktop.jpg);
   min-height: 100vh;
   padding-top: 0;
+
+  @include tablet {
+    background-image: url(../../public/assets/home/background-home-tablet.jpg);
+  }
+
+  @include mobile {
+    background-image: url(../../public/assets/home/background-home-mobile.jpg);
+  }
 }
 
 .home__wrapper {
@@ -8,8 +17,13 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1700px;
-  padding: 25vh 165px 0 165px;
+  max-width: 1150px;
+  padding: 25vh 50px 0 50px;
+
+  @include tablet {
+    flex-direction: column;
+    padding-top: 30px;
+  }
 }
 
 .home__wrapper__text__title {
@@ -18,11 +32,19 @@
   &__span {
     @include subheading-l;
   }
+
+  @include tablet {
+    text-align: center;
+  }
 }
 
 .home__wrapper__paragraph {
   margin-top: 30px;
   max-width: 450px;
+
+  @include tablet {
+    text-align: center;
+  }
 }
 
 .home__wrapper__button {
@@ -32,8 +54,18 @@
   cursor: pointer;
   font-family: $font-primary;
   font-size: 32px;
-  outline: none;
+  outline: 70px solid transparent;
   margin-top: 130px;
-  padding: 119px 64px;
+  padding: 114px 64px;
+  position: relative;
   text-transform: uppercase;
+  transition: outline-color 200ms ease;
+
+  &:hover {
+    outline-color: $border-color;
+  }
+
+  @include tablet {
+    margin-bottom: 120px;
+  }
 }

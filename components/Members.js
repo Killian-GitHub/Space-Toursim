@@ -4,7 +4,7 @@ import Image from 'next/image'
 import data from '../data/data.json'
 
 export default function Members() {
-  const [activeMember, setActiveMember] = React.useState(3)
+  const [activeMember, setActiveMember] = React.useState(0)
 
   const memberHandler = (memberName) => {
     switch (memberName) {
@@ -57,9 +57,10 @@ export default function Members() {
           ))}
         </div>
       </div>
-      <div className="members__image">
+      {/* <div className="members__image">
         <Image src={images} layout="fill" objectFit="cover" />
-      </div>
+      </div> */}
+      <img className="members__image" src={images} />
     </div>
   )
 }

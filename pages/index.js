@@ -1,17 +1,12 @@
-import Layout from '../components/Layout'
+import router from 'next/router'
 
-import background from '../public/assets/home/background-home-desktop.jpg'
+import Layout from '../components/Layout'
 
 export default function Home() {
   return (
     <Layout title={'Home'}>
-      <main
-        className="page-layout home"
-        style={{
-          backgroundImage: `url(${background.src})`
-        }}
-      >
-        <div className="home__wrapper">
+      <main className="page-layout home">
+        <section className="home__wrapper">
           <div className="home__wrapper__text">
             <h1 className="home__wrapper__text__title">
               <span className="home__wrapper__text__title__span">
@@ -27,8 +22,13 @@ export default function Home() {
               this world experience!
             </p>
           </div>
-          <button className="home__wrapper__button">Explore</button>
-        </div>
+          <button
+            className="home__wrapper__button"
+            onClick={() => router.push('/destination')}
+          >
+            Explore
+          </button>
+        </section>
       </main>
     </Layout>
   )

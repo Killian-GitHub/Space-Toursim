@@ -1,12 +1,27 @@
 @mixin nav-text {
-  border-bottom: 2px solid transparent;
   font-family: $font-secondary;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 2.35px;
+  position: relative;
   text-transform: uppercase;
 
-  &:hover {
-    border-bottom: 2px solid $border-color;
+  &::before {
+    background-color: transparent;
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: background-color 200ms ease;
+    width: 100%;
+  }
+
+  &:hover::before {
+    background-color: $border-color;
+  }
+
+  &:hover.header__nav__item--active::before {
+    background-color: $color-tertiary;
   }
 }

@@ -3,6 +3,10 @@
   background-repeat: no-repeat;
   min-height: 75vh;
   padding-top: 25vh;
+
+  @include tablet {
+    padding-top: 70px;
+  }
 }
 
 .page-layout__description {
@@ -17,4 +21,13 @@
     font-weight: 600;
     margin-right: 10px;
   }
+
+  @include tablet {
+    margin-left: 70px;
+  }
+}
+
+.content-layout {
+  margin: 0 auto;
+  max-width: 1500px;
 }

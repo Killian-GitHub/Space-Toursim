@@ -1,0 +1,11 @@
+.crew {
+  background-image: url('../../public/assets/crew/background-crew-desktop.jpg');
+
+  @include tablet {
+    background-image: url('../../public/assets/crew/background-crew-tablet.jpg');
+  }
+
+  @include mobile {
+    background-image: url('../../public/assets/crew/background-crew-mobile.jpg');
+  }
+}

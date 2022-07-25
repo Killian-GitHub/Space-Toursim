@@ -1,6 +1,7 @@
 @import './base/reset.scss';
 @import './base/font.scss';
 @import './base/colors.scss';
+@import './base/responsive.scss';
 
 @import './shared/titles.scss';
 @import './shared/subtitles.scss';
@@ -10,6 +11,8 @@
 
 @import './pages/home.scss';
 @import './pages/destination.scss';
+@import './pages/crew.scss';
+@import './pages/technology.scss';
 
 @import './components/header.scss';
 @import './components/planets.scss';
