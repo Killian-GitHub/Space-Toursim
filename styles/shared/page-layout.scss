@@ -25,6 +25,11 @@
   @include tablet {
     margin-left: 70px;
   }
+
+  @include mobile {
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .content-layout {

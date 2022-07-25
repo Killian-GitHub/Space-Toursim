@@ -3,6 +3,10 @@
   font-family: $font-primary;
   font-size: 150px;
   text-transform: uppercase;
+
+  @include mobile {
+    font-size: 22vw;
+  }
 }
 
 @mixin title-m {
@@ -10,6 +14,10 @@
   font-family: $font-primary;
   font-size: 100px;
   text-transform: uppercase;
+
+  @include mobile {
+    font-size: 18vw;
+  }
 }
 
 @mixin title-s {
@@ -17,4 +25,8 @@
   font-family: $font-primary;
   font-size: 56px;
   text-transform: uppercase;
+
+  @include mobile {
+    font-size: 9.5vw;
+  }
 }

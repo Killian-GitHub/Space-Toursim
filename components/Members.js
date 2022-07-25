@@ -38,9 +38,11 @@ export default function Members() {
   return (
     <div className="members">
       <div className="members__wrapper">
-        <p className="members__wrapper__role">{role}</p>
-        <h1 className="members__wrapper__title">{name}</h1>
-        <p className="members__wrapper__description">{bio}</p>
+        <div>
+          <p className="members__wrapper__role">{role}</p>
+          <h1 className="members__wrapper__title">{name}</h1>
+          <p className="members__wrapper__description">{bio}</p>
+        </div>
 
         <div className="members__wrapper__selector">
           {data.crew.map((el, index) => (

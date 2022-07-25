@@ -5,6 +5,10 @@
   @include tablet {
     flex-direction: column;
   }
+
+  @include mobile {
+    flex-direction: column-reverse;
+  }
 }
 
 .members__wrapper {
@@ -14,6 +18,12 @@
 
   @include tablet {
     margin: 30px auto 0;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 auto 80px;
   }
 }
 
@@ -46,6 +56,11 @@
     max-width: 60vw;
     text-align: center;
   }
+
+  @include mobile {
+    max-width: none;
+    padding: 0 25px;
+  }
 }
 
 .members__wrapper__selector {
@@ -57,6 +72,10 @@
     margin-top: 40px;
     position: initial;
     text-align: center;
+  }
+
+  @include mobile {
+    margin: 40px auto;
   }
 }
 
@@ -93,5 +112,10 @@
     margin: 80px auto 0;
     text-align: center;
     width: 50vw;
+  }
+
+  @include mobile {
+    border-bottom: 1px solid $border-color;
+    width: 90vw;
   }
 }

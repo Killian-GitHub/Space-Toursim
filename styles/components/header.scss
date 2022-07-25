@@ -10,6 +10,10 @@
     margin-top: 0;
     position: initial;
   }
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .header__logo {

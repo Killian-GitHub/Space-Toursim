@@ -65,6 +65,7 @@
   margin: 30px 0;
 
   @include tablet {
+    margin: 30px 0 15px;
     text-align: center;
   }
 }
@@ -72,6 +73,10 @@
 .planets__wrapper__description {
   @include tablet {
     text-align: center;
+  }
+
+  @include mobile {
+    padding: 0 25px;
   }
 }
 
@@ -95,6 +100,13 @@
     justify-content: center;
     margin-bottom: 80px;
   }
+
+  @include mobile {
+    flex-direction: column;
+    margin: 30px auto 0;
+    text-align: center;
+    width: 90%;
+  }
 }
 
 .planets__wrapper__infos__distance,
@@ -102,6 +114,10 @@
   h4 {
     @include subheading-s;
     margin-bottom: 15px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   p {
@@ -111,4 +127,9 @@
 
 .planets__wrapper__infos__time {
   margin-left: 80px;
+
+  @include mobile {
+    margin-left: 0;
+    margin-top: 40px;
+  }
 }
