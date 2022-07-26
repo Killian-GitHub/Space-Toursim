@@ -5,7 +5,11 @@
   padding-top: 25vh;
 
   @include tablet {
-    padding-top: 70px;
+    padding-top: 150px;
+  }
+
+  @include mobile {
+    padding-top: 100px;
   }
 }
 

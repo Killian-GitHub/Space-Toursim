@@ -32,20 +32,18 @@ export default function Vehicles() {
     selectedVehicle[activeVehicle].classList.add('active')
   }, [activeVehicle])
 
-  const [imageHandler, setTargetImageHandler] = React.useState(false)
+  const [imageHandler, setImageHandler] = React.useState(false)
 
   React.useEffect(() => {
     const media = window.matchMedia(`(max-width: 1000px)`)
     media.addEventListener('change', () => {
       if (media.matches) {
-        setTargetImageHandler(true)
+        setImageHandler(true)
       } else {
-        setTargetImageHandler(false)
+        setImageHandler(false)
       }
     })
   }, [])
-
-  console.log(imageHandler)
 
   return (
     <div className="vehicles">

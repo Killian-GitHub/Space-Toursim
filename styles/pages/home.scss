@@ -22,11 +22,12 @@
 
   @include tablet {
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 120px;
   }
 
   @include mobile {
     padding-left: 25px;
+    padding-top: 60px;
     padding-right: 25px;
   }
 }
