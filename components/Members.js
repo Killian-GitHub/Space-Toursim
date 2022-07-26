@@ -1,9 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
 
 import data from '../data/data.json'
 
 export default function Members() {
+  // Member selector handler
   const [activeMember, setActiveMember] = React.useState(0)
 
   const memberHandler = (memberName) => {
@@ -22,19 +22,26 @@ export default function Members() {
     }
   }
 
+  // Data recovery
   const { name, images, role, bio } = data.crew[activeMember]
 
+  // Set active class
   React.useEffect(() => {
     const selectedDestination = document.querySelectorAll(
       '.members__wrapper__selector__item'
     )
 
     for (let i = 0; i < selectedDestination.length; i++) {
-      selectedDestination[i].classList.remove('active')
+      selectedDestination[i].classList.remove(
+        'members__wrapper__selector__item--active'
+      )
     }
-    selectedDestination[activeMember].classList.add('active')
+    selectedDestination[activeMember].classList.add(
+      'members__wrapper__selector__item--active'
+    )
   }, [activeMember])
 
+  // Rendered
   return (
     <div className="members">
       <div className="members__wrapper">
@@ -59,10 +66,7 @@ export default function Members() {
           ))}
         </div>
       </div>
-      {/* <div className="members__image">
-        <Image src={images} layout="fill" objectFit="cover" />
-      </div> */}
-      <img className="members__image" src={images} />
+      <img className="members__image" src={images} alt={name} />
     </div>
   )
 }

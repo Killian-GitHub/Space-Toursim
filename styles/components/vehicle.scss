@@ -25,12 +25,14 @@
 .vehicles__wrapper__selector {
   display: flex;
   flex-direction: column;
+  height: 265px;
   justify-content: space-between;
   margin-right: 60px;
 
   @include tablet {
     align-items: center;
     flex-direction: row;
+    height: auto;
     margin: 0 auto 50px;
     width: 250px;
   }
@@ -57,7 +59,7 @@
     border-color: $color-tertiary;
   }
 
-  &.active {
+  &--active {
     background-color: $color-tertiary;
     border-color: $color-tertiary;
     color: $color-primary;
@@ -101,7 +103,6 @@
 }
 
 .vehicles__image {
-  // position: relative;
   height: 25vw;
   margin-left: 50px;
   max-height: 400px;

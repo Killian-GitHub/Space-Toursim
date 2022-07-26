@@ -1,9 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
 
 import data from '../data/data.json'
 
 export default function Vehicles() {
+  // Vehicle selector handler
   const [activeVehicle, setActiveVehicle] = React.useState(0)
 
   const vehicleHandler = (vehicleName) => {
@@ -19,19 +19,26 @@ export default function Vehicles() {
     }
   }
 
+  // Data recovery
   const { name, images, description } = data.technology[activeVehicle]
 
+  // Set active class
   React.useEffect(() => {
     const selectedVehicle = document.querySelectorAll(
       '.vehicles__wrapper__selector__item'
     )
 
     for (let i = 0; i < selectedVehicle.length; i++) {
-      selectedVehicle[i].classList.remove('active')
+      selectedVehicle[i].classList.remove(
+        'vehicles__wrapper__selector__item--active'
+      )
     }
-    selectedVehicle[activeVehicle].classList.add('active')
+    selectedVehicle[activeVehicle].classList.add(
+      'vehicles__wrapper__selector__item--active'
+    )
   }, [activeVehicle])
 
+  // Image selector handler
   const [imageHandler, setImageHandler] = React.useState(false)
 
   React.useEffect(() => {
@@ -45,6 +52,7 @@ export default function Vehicles() {
     })
   }, [])
 
+  // Rendered
   return (
     <div className="vehicles">
       <div className="vehicles__wrapper">
@@ -65,18 +73,11 @@ export default function Vehicles() {
           <p className="vehicles__wrapper__description">{description}</p>
         </div>
       </div>
-
       <img
         className="vehicles__image"
         src={imageHandler ? images.landscape : images.portrait}
+        alt={name}
       />
-      {/* <div className="vehicles__image">
-        <Image
-          src={imageHandler ? images.landscape : images.portrait}
-          layout="fill"
-          objectFit="cover"
-        />
-      </div> */}
     </div>
   )
 }

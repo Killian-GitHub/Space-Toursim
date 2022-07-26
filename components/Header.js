@@ -2,6 +2,9 @@ import React from 'react'
 import { useRouter } from 'next/router'
 
 export default function Header() {
+  const router = useRouter()
+
+  // Navigation items
   const navItems = [
     { id: '00', label: 'Home', path: '/' },
     { id: '01', label: 'Destination', path: '/destination' },
@@ -9,29 +12,14 @@ export default function Header() {
     { id: '03', label: 'Technology', path: '/technology' }
   ]
 
-  const router = useRouter()
-
-  // const [hamburgerHandler, setHamburgerHandler] = React.useState(false)
-
-  // React.useEffect(() => {
-  //   const media = window.matchMedia(`(max-width: 625px)`)
-  //   media.addEventListener('change', () => {
-  //     if (media.matches) {
-  //       setHamburgerHandler(true)
-  //     } else {
-  //       setHamburgerHandler(false)
-  //     }
-  //   })
-  // }, [])
-
+  // Burger menu handler
   const [hamburgerActive, setHamburgerActive] = React.useState(false)
 
   const setHamburgerState = () => {
     setHamburgerActive((prev) => !prev)
   }
 
-  console.log(hamburgerActive)
-
+  // Rendered
   return (
     <header className="header">
       <svg
@@ -50,7 +38,6 @@ export default function Header() {
         </g>
       </svg>
       <nav>
-        {/* {hamburgerHandler && ( */}
         <button
           className="header__hamburger"
           onClick={() => setHamburgerState()}
@@ -70,7 +57,6 @@ export default function Header() {
             }
           />
         </button>
-        {/* )} */}
         <ul className={hamburgerActive ? 'header__nav--active' : 'header__nav'}>
           {navItems.map((el) => (
             <li
